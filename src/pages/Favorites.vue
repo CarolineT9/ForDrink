@@ -2,12 +2,11 @@
 
 </script>
 
-
 <template>
-  <h1 class="text-6xl font-extrabold">Receitas</h1>
+  <div class="text-6xl font-extrabold">
+    Favoritos
+  </div>
 </template>
-
-
 
 <style>
 

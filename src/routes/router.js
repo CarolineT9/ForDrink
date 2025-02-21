@@ -5,7 +5,9 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
    
-    { path: "/", name: "Home", component: Home }
+    { path: "/", name: "home", component: Home },
+    { path: "/favorites", name: "favorites", component: () => import('../pages/Favorites.vue')},
+
   ],
 })
 
