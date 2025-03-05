@@ -43,7 +43,7 @@ const handleSubmit = () =>{
         </div>
         <div class="space-y-4">
           <label class="block text-white uppercase font-extrabold text-lg" for="category">Category</label>
-          <select class="p-3 w-full rounded-lg focus:outline-none" type="text" id="category" v-model="store.search.category">
+          <select class="p-3 w-full rounded-lg focus:outline-none"  id="category" v-model="store.search.category">
             <option value="">-- Select --</option>
             <option v-for="category in store.categories" :key="category.strCategory" :value="category.strCategory">{{ category.strCategory }}</option>
           </select>

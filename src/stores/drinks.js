@@ -1,6 +1,5 @@
 import { defineStore } from "pinia";
 import { onMounted, reactive, ref } from "vue";
-import axios from 'axios'
 import APIService from '../services/APIService'
 export const useDrinksStore = defineStore('drinks', ()=>{
 
@@ -9,18 +8,21 @@ export const useDrinksStore = defineStore('drinks', ()=>{
         name: '',
         category: ''
     })
+    const recipes = ref([])
     onMounted (async () => {
-        const {data: {drinks}}= await axios.get(APIService.getCategories)
+        const {data: {drinks}}= await APIService.getCategories()
         categories.value = drinks
     })
 
-    function getRecipes(){
-        console.log('consultando api')
+    async function getRecipes(){
+       const {data : {drinks}} =  await APIService.getRecipe(search)
+       recipes.value = drinks
     } 
 
     return{
         categories,
         search,
-        getRecipes
+        getRecipes,
+        recipes
     }
 })
