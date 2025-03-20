@@ -1,4 +1,6 @@
 <script setup>
+import { useDrinksStore } from '../stores/drinks';
+const drinks = useDrinksStore()
    const props = defineProps ({
         recipe:{
             type: Object
@@ -12,7 +14,9 @@
         </div>
         <div class="p-5">
             <h2 class="text-2xl truncate font-extrabold">{{ props.recipe.strDrink }}</h2>
-            <button type="button" class="bg-orange-400 hover:bg-orange-500 mt-5 w-full p-3 font-bold text-white text-lg">
+            <button type="button" class="bg-orange-400 hover:bg-orange-500 mt-5 w-full p-3 font-bold text-white text-lg"
+            @click="drinks.getDrink(recipe.idDrink)"
+            >
                 Ver receita
             </button>
         </div>

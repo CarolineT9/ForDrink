@@ -7,5 +7,8 @@ export default {
     },
     getRecipe({category, name}){
         return api(`filter.php?c=${category}&i=${name}`)
+    },
+    getDrink(id){
+        return api(`lookup.php?i=${id}`)
     }
 }

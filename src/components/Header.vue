@@ -26,13 +26,13 @@ const handleSubmit = () =>{
             <img class="w-32" src="/public/img/logo.svg" alt="logotipo"/>
           </RouterLink>
         </div>
-        <nav class="flex gap-4">
+        <nav class="flex gap-4 text-white">
           <RouterLink active-class="text-orange-500" :to="{name: 'home'}" class="text-white uppercase font-bold">
             Home
           </RouterLink>
           <RouterLink active-class="text-orange-500" :to="{name: 'favorites'}" class="text-white uppercase font-bold">
             Favoritos
-          </RouterLink>
+          </RouterLink> 
         </nav>
       </div>
       <form class="md:w-1/2 2xl:w-1/3 bg-orange-400 my-32 p-10 rounded-lg shadow space-y-6" v-if="homePage" @submit.prevent="handleSubmit">
