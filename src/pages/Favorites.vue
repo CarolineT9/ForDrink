@@ -7,7 +7,7 @@ const favorites = useFavoritesStore()
 
 <template>
   <h1 class="text-6xl font-extrabold">
-    Favoritos
+    Favorites
   </h1>
   <p v-if="favorites.noFavorites" class="my-10 text-center text-2xl">There are no favorites </p>
   <div class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 my-10 gap-10">
@@ -15,6 +15,3 @@ const favorites = useFavoritesStore()
   </div>
 </template>
 
-<style>
-
-</style>

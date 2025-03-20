@@ -2,14 +2,24 @@
 import { computed } from 'vue';
 import { RouterLink, useRoute } from 'vue-router';
 import {useDrinksStore} from '../stores/drinks'
-
+import { useNotificationsStore } from '../stores/notifications';
 const route = useRoute()
 const store  = useDrinksStore()
+const notifications = useNotificationsStore()
 const homePage = computed(() => route.name == "home")
 ;
 
 const handleSubmit = () =>{
   //TODO - Validar
+  if(Object.values(store.search).includes('')){
+   
+      notifications.$patch({
+        text: 'All fields are required.',
+        show: true,
+        error: true
+      })
+    return
+  }
 
   store.getRecipes()
 };
@@ -27,10 +37,10 @@ const handleSubmit = () =>{
           </RouterLink>
         </div>
         <nav class="flex gap-4 text-white">
-          <RouterLink active-class="text-orange-500" :to="{name: 'home'}" class="text-white uppercase font-bold">
+          <RouterLink active-class="text-orange-500" :to="{name: 'home'}" class="uppercase font-bold">
             Home
           </RouterLink>
-          <RouterLink active-class="text-orange-500" :to="{name: 'favorites'}" class="text-white uppercase font-bold">
+          <RouterLink active-class="text-orange-500" :to="{name: 'favorites'}" class="uppercase font-bold">
             Favoritos
           </RouterLink> 
         </nav>

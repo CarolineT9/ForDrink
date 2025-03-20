@@ -2,6 +2,7 @@
 import { RouterView } from 'vue-router';
 import Header from './components/Header.vue';
 import Modal from './components/Modal.vue';
+import Notification from './components/Notification.vue';
 </script>
 
 
@@ -11,6 +12,7 @@ import Modal from './components/Modal.vue';
     <RouterView/>
 </main>
 <Modal></Modal>
+<Notification/>
 </template>
 
 
