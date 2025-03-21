@@ -2,6 +2,8 @@
 
 This project is a drink recipe application using Vue.js and Pinia for state management. The app allows users to search for recipes, view their favorites, and receive notifications for errors or success.
 
+![Desktop](./public/img/home.png)
+![Desktop](./public/img/modal.png)
 ## Features
 ### 1. Drink Search
 On the home page (Home.vue), the user can search for drinks by entering an ingredient name and selecting a category. The form sends the search data to the drinks store, which makes a request to the API and returns the corresponding recipes.
