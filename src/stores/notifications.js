@@ -17,11 +17,7 @@ export const useNotificationsStore  = defineStore('notification', () => {
             }, 3000)
         }
     })
-    // function $reset(){
-    //     text.value = ''
-    //     error.value = false;
-    //     show.value = false
-    // }
+ 
     return{
         text,
         error,

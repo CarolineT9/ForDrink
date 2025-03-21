@@ -41,7 +41,7 @@ const handleSubmit = () =>{
             Home
           </RouterLink>
           <RouterLink active-class="text-orange-500" :to="{name: 'favorites'}" class="uppercase font-bold">
-            Favoritos
+            Favorites
           </RouterLink> 
         </nav>
       </div>
