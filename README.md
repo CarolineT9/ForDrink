@@ -4,6 +4,11 @@ This project is a drink recipe application using Vue.js and Pinia for state mana
 
 ![Desktop](./public/img/home.png)
 ![Desktop](./public/img/modal.png)
+
+### Link Vercel
+[Vercel - Radio Browser](https://for-drink.vercel.app)
+
+
 ## Features
 ### 1. Drink Search
 On the home page (Home.vue), the user can search for drinks by entering an ingredient name and selecting a category. The form sends the search data to the drinks store, which makes a request to the API and returns the corresponding recipes.
