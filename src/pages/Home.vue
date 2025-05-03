@@ -30,7 +30,7 @@ const drinks = useDrinksStore()
 </template>
 
 <style>
-/* Adicione efeitos de fade-in para quando as receitas carregarem */
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s ease;

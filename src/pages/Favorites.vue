@@ -35,7 +35,7 @@ const favorites = useFavoritesStore()
 </template>
 
 <style>
-/* Animação para quando os favoritos são carregados */
+
 .fade-in {
   animation: fadeIn 0.5s ease-in-out;
 }
